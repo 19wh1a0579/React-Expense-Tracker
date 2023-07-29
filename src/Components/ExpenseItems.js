@@ -1,10 +1,20 @@
+import './ExpenseItems.css'
 function ExpenseItems(){
+    const expenseDate=new Date(2021,2,28);
+    const expenseTitle = 'Car insurance';
+    const expenseAmount = 295.67;
+    const locationOfExpenditure = "hyderabad";
+
     return(
+        <div className="expense-item">
         <div>
-        <h3>Expense Items</h3>
-        <h6>Food Rs 10</h6>
-        <h6>Petrol Rs 100</h6>
-        <h6>Movies Rs 200</h6>
+            {expenseDate.toISOString()}
+        </div>
+        <div className="expense-item__description">
+            <h2>{expenseTitle}</h2>
+            <div className="expense-item__price">{expenseAmount}</div>
+            <div>{locationOfExpenditure}</div>
+        </div>
         </div>
     )
 }
